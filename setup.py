@@ -11,7 +11,7 @@ setuptools.setup(
     description="A package to install machine learning, deep learning packages",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/toshihiroryuu/Hammurabi_pip_package",
+    url="https://github.com/toshihiroryuu/toshi_PyPI_package",
     packages=setuptools.find_packages(),
     classifiers=[
         "Programming Language :: Python :: 3",
