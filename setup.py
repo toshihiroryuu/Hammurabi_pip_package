@@ -4,8 +4,8 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setuptools.setup(
-    name="example-pkg-YOUR-USERNAME-HERE", # Replace with your own username
-    version="0.0.1",
+    name="toshi", # Replace with your own username
+    version="0.0.4",
     author="Athul Mathew Konoor",
     author_email="athulmathewkonoor@gmail.com",
     description="A package to install machine learning, deep learning packages",
