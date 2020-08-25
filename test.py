@@ -1,3 +1,3 @@
-import hammurabi
+import toshi 
 
-hammurabi.list_packages()
+toshi.list_packages()

@@ -24,7 +24,7 @@ def install(package_name):
         print("----------", package_name, "- Package already installed", "----------")
     else:
         subprocess.check_call([sys.executable, '-m', 'pip', 'install', package_name])
-        print("----------", package_name, "-Installed by hammurabi", "----------")
+        print("----------", package_name, "-Installed by toshi", "----------")
         
 def add(package_name):
     
@@ -35,7 +35,7 @@ def add(package_name):
         print("----------", package_name, "- Package already installed", "----------")
     else:
         subprocess.check_call([sys.executable, '-m', 'pip', 'install', package_name])
-        print("----------", package_name, "-Installed by hammurabi", "----------")
+        print("----------", package_name, "-Installed by toshi", "----------")
     
 def install_packages(package_list):
     
@@ -47,7 +47,7 @@ def install_packages(package_list):
             print("----------", package_name, "- Package already installed", "----------")
         else:
             subprocess.check_call([sys.executable, '-m', 'pip', 'install', package_name])
-            print("----------", package_name, "- Installed by hammurabi", "----------")
+            print("----------", package_name, "- Installed by toshi", "----------")
             
 def add_packages(package_list):
     
@@ -59,7 +59,7 @@ def add_packages(package_list):
             print("----------", package_name, "- Package already installed", "----------")
         else:
             subprocess.check_call([sys.executable, '-m', 'pip', 'install', package_name])
-            print("----------", package_name, "- Installed by hammurabi", "----------")
+            print("----------", package_name, "- Installed by toshi", "----------")
         
 def check(package_name):
     
@@ -78,7 +78,7 @@ def remove(package_name):
         print("----------", package_name, "- Package not installed", "----------")
     else:
         subprocess.check_call([sys.executable, '-m', 'pip', 'uninstall','-y', package_name])
-        print("----------", package_name, "- Unistalled by hammurabi", "----------")
+        print("----------", package_name, "- Unistalled by toshi", "----------")
         
 def remove_packages(package_list):
     reqs = subprocess.check_output([sys.executable, '-m', 'pip','freeze'])
@@ -89,7 +89,7 @@ def remove_packages(package_list):
             print("----------", package_name, "- Package not installed", "----------")
         else:
             subprocess.check_call([sys.executable, '-m', 'pip', 'uninstall','-y', package_name])
-            print("----------", package_name, "- Unistalled by hammurabi", "----------")
+            print("----------", package_name, "- Unistalled by toshi", "----------")
         
 def uninstall(package_name):
     reqs = subprocess.check_output([sys.executable, '-m', 'pip','freeze'])
@@ -99,7 +99,7 @@ def uninstall(package_name):
         print("----------", package_name, "- Package not installed", "----------")
     else:
         subprocess.check_call([sys.executable, '-m', 'pip', 'uninstall','-y', package_name])
-        print("----------", package_name, "- Unistalled by hammurabi", "----------")
+        print("----------", package_name, "- Unistalled by toshi", "----------")
         
 def uninstall_packages(package_list):
     reqs = subprocess.check_output([sys.executable, '-m', 'pip','freeze'])
@@ -110,15 +110,15 @@ def uninstall_packages(package_list):
             print("----------", package_name, "- Package not installed","----------")
         else:
             subprocess.check_call([sys.executable, '-m', 'pip', 'uninstall','-y', package_name])
-            print("----------", package_name, "- Unistalled by hammurabi", "----------")
+            print("----------", package_name, "- Unistalled by toshi", "----------")
     
-install('numpy')
-check('numpy')
+# install('numpy')
+# check('numpy')
 
-packages= ['simplejson']
-install_packages(packages)
+# packages= ['simplejson']
+# install_packages(packages)
 
-remove('simplejson')
-uninstall_packages(packages)
+# remove('simplejson')
+# uninstall_packages(packages)
 
-list_packages()
+# list_packages()
