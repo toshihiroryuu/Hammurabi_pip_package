@@ -1,5 +1,24 @@
 import sys
 import subprocess
+import ast
+from collections import namedtuple
+
+def find_modules(path):
+    
+    Import = namedtuple("Import", ["module", "name", "alias"])
+    with open(path) as fh:        
+       root = ast.parse(fh.read(), path)
+
+    for node in ast.iter_child_nodes(root):
+        if isinstance(node, ast.Import):
+            module = []
+        elif isinstance(node, ast.ImportFrom):  
+            module = node.module.split('.')
+        else:
+            continue
+
+        for n in node.names:
+            print(Import(module, n.name.split('.'), n.asname))
 
 def list_packages():
     # process output with an API in the subprocess module:
@@ -122,3 +141,5 @@ def uninstall_packages(package_list):
 # uninstall_packages(packages)
 
 # list_packages()
+
+# find_modules("E:\Machine_learning\ML_001_Heart_faliure\Prediction_algorithms\Decision_tree\decision_tree.py")
